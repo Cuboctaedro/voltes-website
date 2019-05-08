@@ -1,0 +1,7 @@
+.columns {
+    padding-top: rem(24);
+    @include mq('md') {
+        column-count: 2;
+        column-gap: rem(32);
+    }
+}

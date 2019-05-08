@@ -1,0 +1,61 @@
+title: Default Page
+preset: page
+fields:
+    contentblocks:
+        label: Περιεχόμενο
+        type: builder
+        fieldsets:
+            text:
+                label: Κείμενο
+                preview: 
+                    snippet: blocks/text
+                fields:
+                    textfield:
+                        type: textarea
+                        label: Κείμενο
+                        buttons:
+                          - link
+                          - italic
+                          - bold
+            heading:
+                label: Τίτλος
+                preview: 
+                    snippet: blocks/heading
+                fields:
+                    headingfield:
+                        type: text
+                        label: Τίτλος
+            subheading:
+                label: Υπότιτλος
+                preview: 
+                    snippet: blocks/subheading
+                fields:
+                    subheadingfield:
+                        type: text
+                        label: Υπότιτλος
+            picture:
+                label: Εικόνα
+                preview: 
+                    snippet: blocks/picture
+                fields:
+                    imagefield:
+                        type: files
+                        multiple: false
+                        label: Εικόνα
+                    captionfield:
+                        type: text
+                        label: Λεζάντα
+            embed:
+                label: Video
+                preview:
+                    snippet: blocks/embed
+                fields:
+                    iframefield: 
+                        type: text
+                        label: Code
+                    captionfield:
+                        type: text
+                        label: Λεζάντα
+
+
+

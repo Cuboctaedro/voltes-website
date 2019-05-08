@@ -1,0 +1,49 @@
+First-name: dim
+
+----
+
+Last-name: kot
+
+----
+
+Address: art
+
+----
+
+City: adfh
+
+----
+
+Phone: zdfh
+
+----
+
+Email: dkottas@gmx.net
+
+----
+
+Children-number: 2
+
+----
+
+Adult-number: 2
+
+----
+
+Children-names: srt
+
+----
+
+Client-message: sth
+
+----
+
+Notes: 
+
+----
+
+Bookingtime: 
+
+----
+
+Payment: false

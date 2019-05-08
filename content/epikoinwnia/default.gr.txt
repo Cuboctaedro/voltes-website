@@ -1,0 +1,53 @@
+Title: Επικοινωνία
+
+----
+
+Contentblocks: 
+
+- 
+  headingfield: >
+    ΚΥΡΙΑΚΑΤΙΚΕΣ ΒΟΛΤΕΣ
+    ΣΤΗΝ ΠΟΛΗ ΑμΚΕ
+  _key: heading
+  _uid: heading_1549632867452_2357
+- 
+  textfield: |
+    Επισκέψεις Αρχ/κων χώρων & Διοργάνωση Σεμιναρίων
+    ΑΦΜ:997082208 - Δ.Ο.Υ. Α΄Αθηνών
+  _key: text
+  _uid: text_1549632889033_2482
+- 
+  headingfield: Επικοινωνία
+  _key: heading
+  _uid: heading_1549632900556_2548
+- 
+  textfield: |
+    **Email:** info@voltes.city
+    **Phone:** +30 690.729.0084
+  _key: text
+  _uid: text_1549632911089_2605
+- 
+  headingfield: Ωράριο λειτουργίας
+  _key: heading
+  _uid: heading_1549632928629_2671
+- 
+  textfield: Δευτ.-Παρ. 10:00-16:00
+  _key: text
+  _uid: text_1549632940693_2728
+- 
+  headingfield: >
+    Διαπιστευμένοι
+    Ξεναγοί
+  _key: heading
+  _uid: heading_1549632946469_2794
+- 
+  textfield: >
+    Όλοι μας οι
+    συνεργάτες είναι
+    Ιστορικοί-Αρχαιολόγοι
+    και είναι
+    Επαγγελματίες
+    Διαπιστευμένοι
+    Ξεναγοί.
+  _key: text
+  _uid: text_1549632954259_2851

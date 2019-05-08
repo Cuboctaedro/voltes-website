@@ -1,0 +1,93 @@
+title: Tour
+
+subpage_builder:
+  - title: Φόρμα κρατήσεων
+    uid: bookingform
+    template: bookingform
+    num: 1
+
+
+tabs:
+    content:
+        label: Περιγραφή
+        icon: text
+        columns:
+          - width: 2/3
+            sections:
+                content:
+                    type: fields
+                    fields:
+                        subtitle:
+                            type: text
+                            label: Υπότιτλος
+                        location:
+                            type: text
+                            label: Τοποθεσία
+                        description:
+                            type: textarea
+                            size: small
+                            label: Περιγραφή
+                        image:
+                            type: files
+                            multiple: false
+                            label: Εικόνα
+                            translate: false
+          - width: 1/3
+            sections:
+                images:
+                    type: files
+                    layout: card
+    tourinfo:
+        label: Πληροφορίες
+        icon: text
+        columns:
+          - width: 2/3
+            sections:
+                info:
+                    type: fields
+                    fields:
+                        meetingpoint:
+                            type: textarea
+                            size: small
+                            label: Σημείο συνάντησης
+                        locationinfo:
+                            type: textarea
+                            size: small
+                            label: Πληροφορίες τοποθεσίας
+                        meetingimage:
+                            type: files
+                            multiple: false
+                            label: Εικόνα σημείου συνάντησης
+                            translate: false
+                        howtoget:
+                            type: url
+                            label: Πως να πάτε
+                        map:
+                            type: url
+                            label: Χάρτες
+                            translate: false
+          - width: 1/3
+            sections:
+                tourinfo:
+                    type: fields
+                    fields:
+                        ages:
+                            type: text
+                            label: Ηλικίες
+                        duration:
+                            type: text
+                            label: Διάρκεια
+                        tourprice:
+                            type: number
+                            label: Τιμή ξενάγησης
+                            translate: false
+                        tickets:
+                            type: textarea
+                            size: small
+                            label: Εισιτήρια χώρων
+                            buttons: false
+                        pricetext:
+                            type: textarea
+                            size: small
+                            label: Επεξήγηση για τα εισιτήρια
+                            buttons: false

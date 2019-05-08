@@ -1,0 +1,19 @@
+.breadcrumbs li {
+    font-size: rem(14);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    &::after {
+        content: "|";
+        margin-right: rem(8);
+        margin-left: rem(8);
+    }
+}
+.breadcrumbs li:last-child {
+    padding-right: 0;
+    &::after {
+        content: "";
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+}

@@ -1,0 +1,57 @@
+title: Site
+
+columns:
+  - width: 2/3
+    sections:
+
+        tourdates:
+            extends: sections/tourdates
+            headline: Ημερολόγιο ξεναγήσεων
+            status: all
+
+        tours:
+            extends: sections/tours
+            headline: Ξεναγήσεις
+            status: all
+
+        locations:
+            extends: sections/locations
+            headline: Τοποθεσίες
+            status: all
+
+        home:
+            extends: sections/pages
+            headline: Αρχική σελίδα
+            status: all
+            templates: home
+
+        pages:
+            extends: sections/pages
+            headline: Σελίδες
+            status: all
+  - width: 1/3
+    sections:
+
+        menu:
+            type: pages
+            headline: Μενού
+            layout: list
+            status: listed
+        social:
+            type: fields
+            fields:
+                facebook:
+                    type: url
+                    label: Facebook
+                twitter:
+                    type: url
+                    label: Twitter
+                instagram:
+                    type: url
+                    label: Instagram
+                pinterest:
+                    type: url
+                    label: Pinterest
+                linkedin:
+                    type: url
+                    label: LinkedIn

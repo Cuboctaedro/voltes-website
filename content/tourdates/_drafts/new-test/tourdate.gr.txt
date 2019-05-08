@@ -1,0 +1,17 @@
+Title: New Test
+
+----
+
+Tour: tours/gods-and-legends
+
+----
+
+Date: 2019-04-30
+
+----
+
+Time: 17:00
+
+----
+
+People: 18

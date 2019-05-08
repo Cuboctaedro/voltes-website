@@ -1,0 +1,18 @@
+title: Locations
+
+options:
+    url: false
+    status: false
+    delete: false
+
+sections:
+
+    drafts:
+        extends: sections/locations
+        headline: Αδημοσίευτες Τοποθεσίες
+        status: draft
+
+    published:
+        extends: sections/locations
+        headline: Δημοσιευμένες Τοποθεσίες
+        status: listed

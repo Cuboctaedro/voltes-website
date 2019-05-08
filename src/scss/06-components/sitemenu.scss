@@ -1,0 +1,42 @@
+.sitemenu {
+    &__item {
+        display: block;
+        padding: rem(16);
+        color: map-get($colors, 'white');
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-family: map-get($font-families, 'titles');
+        background-color: map-get($colors, 'green');
+        text-decoration: none;
+        &:hover {
+            background-color: map-get($colors, 'green-light');
+        }
+    }
+    &__button {
+        @include mq('lg') {
+            display: none;
+        }
+    }
+
+    &__list {
+        position:absolute;
+        display: none;
+        top: rem(64);
+        bottom: rem(32);
+        left: rem(8);
+        right: rem(8);
+        background-color: map-get($colors, 'green');
+        box-shadow: map-get($box-shadows, 'lg');
+        z-index: 100;
+        &.is-active {
+            display: block;
+        }
+        @include mq('lg'){
+            display: flex;
+            position: static;
+            width: auto;
+            box-shadow: map-get($box-shadows, 'none');
+            z-index: auto;
+        }
+    }
+}

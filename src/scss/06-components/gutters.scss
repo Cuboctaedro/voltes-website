@@ -1,0 +1,35 @@
+.gutters-main {
+    padding-left: rem(12);
+    padding-right: rem(12);
+    @include mq('md') {
+        padding-left: rem(18);
+        padding-right: rem(18);
+    };
+    @include mq('lg') {
+        padding-left: rem(24);
+        padding-right: rem(24);
+    };
+    @include mq('xl') {
+        padding-left: rem(36);
+        padding-right: rem(36);
+    };
+
+}
+
+.gutters-vertical {
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+    @include mq('md') {
+        padding-top: rem(18);
+        padding-bottom: rem(18);
+    };
+    @include mq('lg') {
+        padding-top: rem(24);
+        padding-bottom: rem(24);
+    };
+    @include mq('xl') {
+        padding-top: rem(36);
+        padding-bottom: rem(36);
+    };
+
+}

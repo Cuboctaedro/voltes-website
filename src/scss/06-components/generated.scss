@@ -1,0 +1,28 @@
+.generated {
+    @include typesize(14, 18);
+    @include mq('md') {
+        @include typesize(16, 24);
+    };
+    font-family: map-get($font-families, 'serif');
+    p {
+        margin-bottom: rem(18);
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    h2 {
+        @include heading-2;
+        margin-bottom: rem(12);
+        margin-top: rem(24);
+    }
+    strong {
+        font-family: map-get($font-families, 'sans');
+        font-weight: 700;
+    }
+    a {
+        text-decoration: underline;
+    }
+    a:hover {
+        color: map-get($colors, 'red');
+    }
+}

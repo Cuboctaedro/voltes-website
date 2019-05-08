@@ -1,0 +1,53 @@
+title: Tourdate
+
+options:
+    createChild: true
+    create: true
+
+subpage_builder:
+  - title: CSV download
+    uid: csvdownload
+    template: csvdownload
+    num: 1
+
+tabs:
+    content:
+        label: Ξενάγηση
+        icon: text
+        sections:
+            content:
+                type: fields
+                fields:
+                    tour:
+                        type: select
+                        label: Επιλογή Ξενάγησης
+                        options: query
+                        query:
+                            fetch: site.find("tours").children
+                            text: "{{ page.title }}"
+                            value: "{{ page.id }}"
+                    date:
+                        type: date
+                        label: Ημερομηνία
+                        translate: false
+                    time:
+                        type: time
+                        label: Ωρα
+                        translate: false
+                    people:
+                        type: number
+                        label: Μέγιστος αριθμός ατόμων
+                        default: 18
+                        translate: false
+    bookingslist:
+        label: Κρατήσεις
+        icon: list-bullet
+        sections:
+            bookings:
+                type: pages
+                headline: Κρατήσεις
+                templates: booking
+                parent: page.children.find("bookinglist")
+                status: all
+                text: '{{ page.bookingtime }} | {{ page.firstname }} {{ page.lastname }} | {{ page.phone }} | {{ page.email }}'
+                info: '{{ page.childrennum.toString }} | {{ page.adultnum.toString }}'

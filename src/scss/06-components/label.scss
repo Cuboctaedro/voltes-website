@@ -1,0 +1,6 @@
+.label {
+    color: map-get($colors, 'grey-dark');
+    @include typesize(12, 24);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}

@@ -1,0 +1,173 @@
+
+ @tailwind preflight;
+
+
+ @tailwind components;
+
+.heading-1 {
+    @apply font-titles font-normal text-24 leading-tight ;
+}
+
+@screen sm {
+    .heading-1 {
+        @apply text-30 ;
+    }
+}
+
+.label {
+    @apply text-12 uppercase tracking-wide text-grey-darker leading-loose  ;
+}
+
+.tagitem:after {
+    content: ",";
+    padding-right: 8px;
+}
+
+.tagitem:last-child:after {
+    content: "";
+    padding-right: 0;
+}
+
+.button {
+    @apply h-32 leading-4 text-14 uppercase tracking-wide px-16 cursor-pointer inline-block no-underline ;
+}
+
+.bottomborder {
+    @apply border-b border-solid border-grey-light ;
+}
+.bottomborder:last-child {
+    @apply border-b-0 ;
+}
+
+@tailwind utilities;
+
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+.visually-hidden {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+    background-image: url('images/maze2.png');
+}
+
+#main {
+    flex: 1;
+}
+
+.card-link::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+.honeypot {
+    position: absolute;
+    left: -9999px;
+}
+
+.generated p {
+    @apply pb-16 ;
+}
+
+.generated p:last-child {
+    margin-bottom: 0;
+}
+
+
+.radiolabel {
+    @apply pl-32 ;
+}
+.radiolabel:hover {
+    @apply bg-grey-lighter;
+}
+.radiolabel:after {
+    content:'';
+    @apply w-16 h-16 pin-l absolute border border-solid border-grey ;
+    top: 16px;
+    border-radius: 50%;
+}
+.radiolabel:hover:after {
+    @apply bg-grey ;
+}
+input:checked ~ .radiolabel:after {
+    @apply bg-green ;
+}
+/* .radiolabel.full {
+    @apply bg-red-lightest border-red-dark ;
+} */
+/* .radiolabel.full:hover,
+input:checked ~ .radiolabel.full {
+    @apply bg-red-light;
+} */
+/* .radiolabel.almost {
+    @apply bg-yellow-lightest border-yellow-dark ;
+} */
+/* .radiolabel.almost:hover,
+input:checked ~ .radiolabel.almost  {
+    @apply bg-yellow-light;
+} */
+/* .radiolabel.open {
+    @apply bg-green-lightest border-green-dark ;
+} */
+/* .radiolabel.open:hover,
+input:checked ~ .radiolabel.open  {
+    @apply bg-green-light;
+}
+input:checked ~ .radiolabel:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='000000' fill-rule='nonzero'/%3E%3C/svg%3E ");
+} */
+.radioinput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    visibility: hidden;
+}
+.embed-container {
+    padding-bottom: 56.25%;
+}
+.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+input:required,
+textarea:required {
+    @apply border-red-dark shadow-none;
+}
+input:required:valid,
+textarea:required:valid {
+    @apply border-grey-dark shadow-none;
+}
+input:focus,
+textarea:focus {
+    @apply border-black shadow-none;
+}

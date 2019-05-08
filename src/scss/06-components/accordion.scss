@@ -1,0 +1,14 @@
+.accordion__header {
+    cursor: pointer;
+    background-color:  map-get($colors, 'grey-light');
+    &:hover {
+        background-color:  map-get($colors, 'black');
+        color: map-get($colors, 'white');
+    }
+    &.is-active {
+        background-color:  map-get($colors, 'grey');
+        color: map-get($colors, 'white');
+        border-bottom: 1px solid map-get($colors, 'grey');
+    }
+
+}

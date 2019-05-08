@@ -1,0 +1,55 @@
+$border-style-settings: (
+    'responsive': true,
+    'hover': false,
+    'focus': false,
+    'classname' : 'border-s',
+    'property' : 'border-style'
+);
+
+$border-style-values: (
+    'solid' : solid,
+    'dotted' : dotted,
+    'dashed' : dashed
+);
+
+@include utility($border-style-settings, $border-style-values);
+
+$border-top-style-settings: (
+    'responsive': true,
+    'hover': false,
+    'focus': false,
+    'classname' : 'border-ts',
+    'property' : 'border-top-style'
+);
+
+@include utility($border-top-style-settings, $border-style-values);
+
+$border-right-style-settings: (
+    'responsive': true,
+    'hover': false,
+    'focus': false,
+    'classname' : 'border-rs',
+    'property' : 'border-right-style'
+);
+
+@include utility($border-right-style-settings, $border-style-values);
+
+$border-bottom-style-settings: (
+    'responsive': true,
+    'hover': false,
+    'focus': false,
+    'classname' : 'border-bs',
+    'property' : 'border-bottom-style'
+);
+
+@include utility($border-bottom-style-settings, $border-style-values);
+
+$border-left-style-settings: (
+    'responsive': true,
+    'hover': false,
+    'focus': false,
+    'classname' : 'border-ls',
+    'property' : 'border-left-style'
+);
+
+@include utility($border-left-style-settings, $border-style-values);

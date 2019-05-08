@@ -1,0 +1,17 @@
+title: Home
+
+options:
+    url: false
+    status: false
+    delete: false
+preset: page
+
+fields:
+    gallery:
+        label: Εικόνες
+        type: files
+        min: 1
+        max: 5
+    notice:
+        label: Ειδοποίηση
+        type: text

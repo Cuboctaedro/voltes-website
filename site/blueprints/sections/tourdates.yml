@@ -1,0 +1,6 @@
+type: pages
+status: all
+parent: site.find("tourdates")
+templates: tourdate
+layout: list
+text: '{{ page.tour.toPage.title }} | {{ page.date }} | {{ page.time }}'

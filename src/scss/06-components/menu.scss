@@ -1,0 +1,19 @@
+.menu__link {
+    @include typesize(14,48);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    height: rem(48);
+    padding-left: rem(12);
+    padding-right: rem(12);
+    display: block;
+    &:hover {
+        background-color: map-get($colors, 'black');
+        color: map-get($colors, 'white');
+    }
+    &.is-active {
+        background-color: map-get($colors, 'grey-light');
+    }
+    &.is-active:hover {
+        color: map-get($colors, 'black');
+    }
+}

@@ -1,0 +1,15 @@
+.home-gallery {
+    position: relative;
+    height:0;
+    padding-top:25%;
+    &__image {
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        display: block;
+        width:100%;
+        z-index:1;
+    }
+}
