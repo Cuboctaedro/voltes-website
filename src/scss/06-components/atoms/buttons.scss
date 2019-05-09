@@ -10,11 +10,11 @@
     letter-spacing: 0.05rem;
     background-color: map-get($colors, 'black');
     color: map-get($colors, 'white');
-    box-shadow: map-get($box-shadows, 'sm');
+    box-shadow: map-get($box-shadows, '3');
     white-space: nowrap;
     &:hover {
         background-color: map-get($colors, 'grey-darkest');
-        box-shadow: map-get($box-shadows, 'md');
+        box-shadow: map-get($box-shadows, '6');
     }
     &:focus {
         box-shadow: map-get($box-shadows, 'outline');

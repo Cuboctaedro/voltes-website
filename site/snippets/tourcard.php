@@ -1,35 +1,37 @@
 <article itemprop="itemListElement" itemscope itemtype="http://schema.org/Event" class="card card--raised card--linked">
     <div class="w-full">
         <img src="<?= $tour->image()->landscape_sm() ?>" alt="<?= $tour->location() ?>" class="lazyload block max-w-full" itemprop="image">
-        <?php if ($tour->status() == 'almost'): ?>
-            <div class=""><?= t('almost') ?></div>
-        <?php elseif ($tour->status() == 'full'): ?>
-            <div class=""><?= t('full') ?></div>
-        <?php elseif ($tour->status() == 'closed'): ?>
-            <div class=""><?= t('full') ?></div>
-        <?php endif ; ?>
     </div>
     <div class="w-full">
-        <header class=" p-16">
+        <header class="border-bottom p-16">
             <h2 itemprop="name" class="heading-2">
-                <a href="<?= $tour->url() ?>" class="card-link text-green hover:text-green no-underline"><?= $tour->title() ?></a>
+                <a href="<?= $tour->url() ?>" class="card__link"><?= $tour->title() ?></a>
             </h2>
+            <p><span class="visually-hidden"><?= t('location') ?>: </span><?= $tour->location() ?></p>
         </header>
-        <div class="border-grey-light border-t p-16">
-            <p class="label inline-block pr-8"><?= t('location') ?>: </p>
-            <p class="inline-block" itemprop="location"><?= $tour->location() ?></p>
+        <div class="card__badge card__badge--accent">
+            <span class="pr-8"><?= t('ages') ?>: </span>
+            <span><?= $tour->ages() ?></span>
         </div>
-        <div class="border-grey-light border-t p-16">
-            <p class="label inline-block pr-8"><?= t('ages') ?>: </p>
-            <p class="inline-block"><?= $tour->ages() ?></p>
+        <div class="p-16 border-bottom">
+            <?= $tour->description()->excerpt(75) ?>
         </div>
         <?php if($tour->hasFutureDates()): ?>
-        <div class="border-grey-light border-t p-16">
-            <p class="label inline-block pr-8"><?= t('dates') ?>: </p>
             <?php foreach($tour->futureDates() as $tourdate): ?>
-                <p class="inline-block tagitem"><?= $tourdate->short_date(); ?></p>
+                <?php if($tourdate->status() == 'full'): ?>
+                    <div class="pl-16 pr-16 pt-8 pb-8 bg-red-lightest flex flex-row flex-wrap justify-between border-bottom">
+                        <?= $tourdate->format_date(); ?>
+                    </div>
+                <?php elseif($tourdate->status() == 'almost'): ?>
+                    <div class="pl-16 pr-16 pt-8 pb-8 bg-yellow-lightest flex flex-row flex-wrap justify-between border-bottom">
+                        <?= $tourdate->format_date(); ?>
+                    </div>
+                <?php elseif($tourdate->status() == 'open'): ?>
+                    <div class="pl-16 pr-16 pt-8 pb-8 bg-green-lightest flex flex-row flex-wrap justify-between border-bottom">
+                        <?= $tourdate->format_date(); ?>
+                    </div>
+                <?php endif; ?>
             <?php endforeach; ?>
-        </div>
         <?php endif; ?>
     </div>
 </article>

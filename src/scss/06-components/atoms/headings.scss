@@ -18,10 +18,6 @@
     font-weight: 400;
     color: map-get($colors, 'green');
     @include typesize(24, 32);
-    @include mq('lg') {
-        @include typesize(30, 36);
-    };
-
 }
 
 .heading-2 {

@@ -25,14 +25,19 @@
         bottom: rem(32);
         left: rem(8);
         right: rem(8);
-        background-color: map-get($colors, 'green');
-        box-shadow: map-get($box-shadows, 'lg');
-        z-index: 100;
+        & ul {
+            background-color: map-get($colors, 'green');
+            z-index: 100;
+        }
         &.is-active {
             display: block;
+            & ul {
+                box-shadow: map-get($box-shadows, '24');
+            }
+
         }
         @include mq('lg'){
-            display: flex;
+            display: block;
             position: static;
             width: auto;
             box-shadow: map-get($box-shadows, 'none');

@@ -19,13 +19,13 @@
 <body class="ff-sans fs-16 lh-150" style="background-image:url('/assets/images/maze2.png')">
 <a href="#main" class="skip-link"><?= t('skiplink') ?></a>
 
-<div id="siteheader" class="relative z-0">
-    <div class="fixed z-5 bg-green flex flex-row justify-between w-full shadow-md">
+<div id="siteheader" class="relative z-2">
+    <div class="fixed z-5 bg-green flex flex-row justify-between w-full shadow-18">
         <?php snippet('menu'); ?>
         <?php snippet('social'); ?>
     </div>
     <?php if($page->isHomePage()): ?>
-        <div class="home-gallery z-1">
+        <div class="home-gallery z-3">
             <?php $n = 1; ?>
             <?php foreach($page->gallery()->toFiles() as $image): ?>
                 <picture class="">

@@ -4,15 +4,19 @@
 
     <div class="w-full pl-8 pr-8 sm__pl-16 sm__pr-16">
 
-        <article itemprop="mainEntity" itemscope itemtype="http://schema.org/Event" class="shadow-md bg-white mb-48 flex flex-row flex-wrap md__items-stretch">
+        <article itemprop="mainEntity" itemscope itemtype="http://schema.org/Event" class="card card--raised mb-48 flex flex-row flex-wrap md__items-stretch">
 
             <div class="w-full md__w-2-3 md__border-right">
 
                 <header class="p-24 border-bottom">
                     <h1 itemprop="name" class="heading-1"><?= $page->title() ?></h1>
                 </header>
-                <div class="w-full border-bottom">
+                <div class="relative border-bottom">
                     <?= snippet('landscapeimage', ['file' => $page->image(), 'alt' => $page->location()]);?>
+                    <div class="card__badge card__badge--accent">
+                        <span class="pr-8"><?= t('ages') ?>: </span>
+                        <span><?= $page->ages() ?></span>
+                    </div>
                 </div>
                 <div class="w-full p-24 border-bottom">
                     <?= $page->description()->kt() ?>
@@ -21,10 +25,6 @@
             </div>
 
             <div class="w-full md__w-1-3">
-                <div class="border-bottom p-16" style="height:86px;">
-                    <p class="label"><?= t('ages') ?>: </p>
-                    <p class="value "><?= $page->ages() ?></p>
-                </div>
                 <div class="">
                     <p class="label visually-hidden"><?= t('dates') ?>: </p>
                     <?php if($page->hasFutureDates()): ?>
@@ -71,7 +71,7 @@
                 <div class="border-bottom p-16">
                     <div class="label"><?= t('price') ?>: </div>
                     <div class="value">
-                        <p itemprop="price" content="<?= $page->tourprice() ?>"><?= t('tourprice') ?>: <?= $page->tourprice() ?> <span itemprop="priceCurrency" content="EUR">€</span></p>
+                        <p itemprop="price" content="<?= $page->tourprice() ?>"><?= t('tourprice') ?>: <?= $page->tourprice() ?> <span itemprop="priceCurrency" content="EUR">Ευρώ</span></p>
                         <p><?= t('tickets') ?>: <?= $page->tickets() ?></p>
                     </div>
                 </div>

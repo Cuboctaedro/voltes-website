@@ -1,5 +1,5 @@
     <footer class="" id="sitefooter">
-        <div class="bg-green-lighter pt-48 pb-48">
+        <div class="bg-green-lighter pt-48 pb-48 shadow-12">
             <div class="container pl-16 pr-16 flex flex-row flex-wrap">
                 <div class="w-full lg__w-1-2 pl-16 pr-16">
                     <div class="mb-72">

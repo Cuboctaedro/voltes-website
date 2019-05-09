@@ -1,12 +1,12 @@
 <?php
 class TourPage extends Page {
-    
+
     public function tourDates() {
-        
+
         return $this->site()->pages()->find('tourdates')->childrenAndDrafts()->filterBy('tour', $this->id());
 
     }
-    
+
     public function hasDates() {
 
         if($this->tourDates()->count() > 0) {
@@ -25,7 +25,7 @@ class TourPage extends Page {
 
     public function futureDates() {
 
-        return $this->tourDates()->filterBy('isFuture', true);
+        return $this->tourDates()->filterBy('isFuture', true)->sortBy('date');
 
     }
 
